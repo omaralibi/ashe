@@ -72,12 +72,12 @@
   }
 
   .midText {
-    font-size: 1.5vw;
+    font-size: 2vw;
     margin: 10px 0;
   }
 
   .be {
-    font-size: 1.2vw;
+    font-size: 2vw;
   }
 
   .social-links {
@@ -86,7 +86,7 @@
   }
 
   .social-links a {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }
 
