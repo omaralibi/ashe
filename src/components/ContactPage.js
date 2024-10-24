@@ -34,10 +34,10 @@ const ContactPage = () => {
         setIsSubmitting(true); // Disable the button
 
         emailjs.sendForm(
-            'service_734iuhd',   // Replace with your EmailJS service ID
-            'template_3ngxivs',  // Replace with your EmailJS template ID
+            process.env.REACT_APP_EMAILJS_SID,   // Replace with your EmailJS service ID
+            process.env.REACT_APP_EMAILJS_TID,  // Replace with your EmailJS template ID
             e.target,
-            'yQXfcNM6YLXjklCsO'  // Replace with your Public Key
+            process.env.REACT_APP_EMAILJS_PK  // Replace with your Public Key
         )
         .then((result) => {
             console.log('Email successfully sent!', result.text);
