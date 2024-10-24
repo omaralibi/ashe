@@ -1,0 +1,127 @@
+/* General Page Styling */
+.about-container {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 48px;
+  color: #0abab5;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: left;
+  width: 100%;
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 900px;
+  color: #666;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+/* Team Section */
+.team-section {
+  width: 100%;
+}
+
+.team-title {
+  font-size: 36px;
+  color: #0abab5;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.team-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Team Card Styles */
+.team-member {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.card-inner {
+  position: relative;
+}
+
+.card-front,
+.card-back {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.swiss-front {
+  background-color: #e0e0e0; /* Light grey background */
+  color: #333;
+  text-align: left;
+}
+
+.swiss-back {
+  background-color: #fff;
+  border: 2px solid #0abab5;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+
+  .team-title {
+    font-size: 30px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}

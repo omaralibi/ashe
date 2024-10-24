@@ -1,38 +1,51 @@
 {
   "name": "ashe",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A clothing brand preorder site featuring exclusive old money outfits.",
+  "keywords": [
+    "clothing",
+    "preorder",
+    "fashion",
+    "old money"
+  ],
+  "main": "src/index.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@headlessui/react": "^2.1.10",
+    "@heroicons/react": "^2.1.5",
+    "axios": "^1.7.7",
+    "country-state-city": "^3.2.1",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.21.1",
+    "firebase": "^10.14.1",
+    "framer-motion": "^11.11.9",
+    "googleapis": "^144.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "^3.0.1",
+    "react-select": "^5.8.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/runtime": "7.13.8",
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.0.0" 
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

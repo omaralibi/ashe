@@ -1,0 +1,267 @@
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+.form {
+    display: flex; /* Use flexbox to align child sections */
+    align-items: center;
+    flex-direction: column;
+    gap: 20px; /* Space between the two sections */
+    width: 100%; /* Full width for responsiveness */
+}
+/* Popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    scale: 0.9;
+    transform: translate(-55%, -55%);
+    z-index: 1000;
+    padding: 0 20px;
+    overflow-y: scroll; /* Allow scrolling if content overflows */
+    max-height: fit-content; /* Limit max height for better usability */
+    width: fit-content; /* Responsive width */
+}
+
+/* Popup Inner */
+.popup-inner {
+    background-color: #ffffff;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid #0abab479;
+    padding: 40px; /* Adjusted padding for better content fit */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Label */
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Grid Container */
+.grid-container {
+    display: flex;
+align-items: stretch;   
+ gap: 40px; /* Increased gap for better separation */
+    width: fit-content; /* Full width for responsiveness */
+}
+
+/* Customer Info and Billing Address Sections */
+.customer-info,
+.billing-address {
+    display: grid; /* Maintain grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
+    gap: 20px; /* Consistent gap */
+    flex: 1; /* Allow sections to grow and take equal space */
+}
+
+/* Grid Item */
+.grid-item {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item-full {
+    grid-column: span 2; /* Span full width on larger screens */
+}
+.titler{
+    grid-column: span 2; /* Span full width on larger screens */
+    margin-bottom: -10px;
+    
+}
+.titler h2 {
+    font-size: 1rem; /* Use a responsive size for better readability */
+    text-align: start;
+    color: #145b59a1;
+    margin-bottom: 5px; /* Adjusted margin for better spacing */
+    margin-left: 20px;
+    font-weight: 400; /* Increased weight for better visibility */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Input */
+.grid-item-full input,
+.grid-item input {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfdfd3a;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%; /* Full width for inputs */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input Focus and Hover States */
+input:focus {
+    border-color: #0abab5;
+    background-color: #f0f0f06a;
+    outline: none; /* Remove default outline */
+}
+
+input:hover {
+    border-color: #0abab5;
+}
+
+/* Placeholder Text */
+input::placeholder {
+    color: rgba(77, 77, 77, 0.5);
+}
+
+/* Button */
+.submitBtn {
+    background-color: #0abab5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+    width: auto;
+}
+
+.submitBtn:hover {
+    background-color: #0a8a85;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1001;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.close-btn::before,
+.close-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 2px;
+    background-color: #333;
+    transform-origin: center;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close-btn:hover::before,
+.close-btn:hover::after {
+    background-color: #0abab5;
+}
+
+.close-btn:active {
+    transform: scale(0.9);
+}
+
+/* Loader */
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #0abab5;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+.lone {
+    width: 200px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Confirmation Message */
+.confirmation-message {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+}
+
+.thank-you {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.message-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .popup{
+        width: 90%;scale: 1;    transform: translate(-50%, -50%);
+
+    }
+
+
+
+}
+
+
+@media (max-width: 768px) {
+    input {
+        font-size: 1rem; /* Ensure input font size is readable on smaller devices */
+    }
+    .grid-container {    display: block;
+    }
+    .popup {
+         /* Increased max width on larger screens */
+        max-height: 80vh;
+        padding: 0 00px;
+    }
+
+    .billing-address{
+        margin-top: 20px;
+    }
+}
