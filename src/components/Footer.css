@@ -6,21 +6,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
-  width: 100vw; 
+  width: 100vw;
   background-color: white; /* Optional: Add a background color */
 }
 
 .midText {
   font-family: 'Montserrat', sans-serif;
   font-weight: light;
-
   margin: 0 15px;
-  font-size: 1.2vw;
+  font-size: 1.5rem; /* Base font size */
 }
 
 .be {
   display: flex;
-  font-size: 0.9vw;
+  font-size: 1rem; /* Base font size */
   font-family: 'Montserrat', sans-serif;
   font-weight: light;
   color: #0abab5;
@@ -28,41 +27,102 @@
 
 .social-links {
   display: flex;
-  gap: 20px; 
-  align-items: center; 
+  gap: 20px;
+  align-items: center;
 }
 
 .social-links a {
   color: black;
   text-decoration: none;
-  font-size: 2vw; 
+  font-size: 2rem; /* Base font size */
   margin-bottom: 10px;
-  display: flex; 
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .social-links a:hover {
-  color: #0abab5; 
+  color: #0abab5;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    padding: 0 5%;
+  }
+
+  .midText {
+    font-size: 1.25rem;
+  }
+
+  .be {
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1024px) {
   .footer {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-    padding: 10px 5%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 2%;
     position: relative;
   }
 
-  .footer p {
-      font-weight: 600;
-      font-size: 2vw;
+  .midText {
+    font-size: 1.5vw;
+    margin: 10px 0;
+  }
+
+  .be {
+    font-size: 1.2vw;
   }
 
   .social-links {
-      justify-content: center;
-
+    justify-content: center;
+    margin-top: 10px;
   }
+
+  .social-links a {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 1%;
+  }
+
+  .midText {
+    font-size: 3vw;
+    margin: 5px 0;
+  }
+
+  .be {
+    font-size: 2vw;
+  }
+
+  .social-links a {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 5px;
+  }
+
+  .midText {
+    font-size: 3vw;
+    margin: 5px 0;
+  }
+
+  .be {
+    font-size: 2vw;
+  }
+
   .social-links a {
     font-size: 4vw;
   }

@@ -1,54 +1,75 @@
 import React from 'react';
-import './AboutPage.css'; // Import the Swiss-style CSS file
-import team from '../Images/ena.jpg';
+import './AboutPage.css';
+import teamImage from '../Images/ena.jpg';
+import craftsmanshipImage from '../Images/ena.jpg'; // Add appropriate image paths
 
 const AboutPage = () => {
+  const showDetail = (event) => {
+    // Logic to show details of the timeline event
+    console.log(`Event ${event} details shown!`);
+  };
+
   return (
-    <div className="about-container">
-      <h1 className="about-title">About Us</h1>
-      <p className="about-description">
-        Ashe is a brand that focuses on 'old money' clothing, inspired by inherited stories and timeless elegance. 
-        We believe in the art of simplicity and sophistication, creating pieces that transcend trends.
-      </p>
-
-      <div className="team-section">
-        <h2 className="team-title">Meet the Team</h2>
-        <div className="team-cards">
-          {/* First Team Member */}
-          <div className="team-member">
-            <div className="card">
-              <div className="card-inner">
-                <div className="card-front swiss-front">
-                  <h3>Omar Alibi</h3>
-                  <p>Founder & Creative Director</p>
-                </div>
-                <div className="card-back swiss-back">
-                  <img src={team} alt="Omar Alibi" />
-                  <p>Graphic Designer, Web Developer, Video Maker, Operator, Customer Support, Marketing Manager, Community Manager</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Second Team Member */}
-          <div className="team-member">
-            <div className="card">
-              <div className="card-inner">
-                <div className="card-front swiss-front">
-                  <h3>Omar Alibi</h3>
-                  <p>Marketing & Strategy</p>
-                </div>
-                <div className="card-back swiss-back">
-                  <img src={team} alt="Omar Alibi" />
-                  <p>Graphic Designer, Web Developer, Video Maker, Operator, Customer Support, Marketing Manager, Community Manager</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+    <section className="about-section">
+      {/* Hero Section */}
+      <div className="hero-section">
+        <h1>Welcome to Ashe: Where Tradition Meets Elegance</h1>
+        <p>Join Our Journey</p>
       </div>
-    </div>
+
+      {/* Chapter One: The Inspiration */}
+      <section className="chapter-one">
+        <h2>Our Inspiration</h2>
+        <p>
+          Every stitch tells a story. Ashe is rooted in the rich tapestry of Tunisian heritage,
+          where the past inspires the present.
+        </p>
+        <div className="inspiration-illustration fade-in">
+          {/* Animated illustration goes here */}
+        </div>
+      </section>
+
+      {/* Chapter Two: The Craftsmanship */}
+      <section className="chapter-two">
+        <h2>The Craftsmanship</h2>
+        <p>
+          Handcrafted with love, each piece embodies sophistication and meticulous attention to detail.
+        </p>
+        <img src={craftsmanshipImage} alt="Craftsmanship" className="craftsmanship-image fade-in" />
+        <p className="anecdote">“I remember my grandmother teaching me the art of sewing...”</p>
+      </section>
+
+      {/* Chapter Three: The Vision */}
+      <section className="chapter-three">
+        <h2>Our Vision</h2>
+        <p>To create garments that transcend time, blending tradition with modern elegance.</p>
+
+      </section>
+
+      {/* Interactive Timeline */}
+      <section className="timeline-section">
+        <h2>Our Journey</h2>
+        <div className="timeline">
+          <div className="timeline-event" onMouseEnter={() => showDetail(1)}>
+            <p>2018: Brand Established</p>
+          </div>
+          <div className="timeline-event" onMouseEnter={() => showDetail(2)}>
+            <p>2020: First Collection Launched</p>
+          </div>
+          {/* Add more timeline events as needed */}
+        </div>
+        <div className="timeline-detail">
+          {/* Dynamic content based on the hovered event */}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="cta-section">
+        <h2>Join Our Community</h2>
+        <p>Explore our ethos and engage with our story. Watch our interviews and share in our journey.</p>
+        <a href="/explore" className="cta-button">Discover More</a>
+      </section>
+    </section>
   );
 };
 
