@@ -1,14 +1,13 @@
 .navbar {
   display: flex;
-  height: fit-content;
+  height: 90px;
   justify-content: center;
   width: 100vw;
   align-items: center;
   z-index: 401;
-  background-color: rgba(255, 255, 255, 0.964);
 }
 
-.navwhendrop {
+.navwhendrop {  height: 90px;
   display: none;
   z-index: 401;
   position: sticky;
@@ -43,6 +42,7 @@
 
 .logo_resp {
   display: none;
+  
 }
 
 .logo_resp:hover {
@@ -50,20 +50,18 @@
 }
 
 .logo_resp img {
-  height: 10vw;
+  height: 7vw;
   width: auto;
 }
 
-button {
-  width: 50px;
-}
+
 
 .navbar-toggle {
   display: none;
   background-color: transparent;
   border: none;
   width: 1px;
-  font-size: 17px;
+  font-size: 30px;
   color: black;
   cursor: pointer;
   z-index: 1100;
@@ -87,6 +85,7 @@ button {
   top: 20%;
   padding: 10px;
   height: fit-content;
+
   animation: bounce 0.5s ease;
 }
 
@@ -104,7 +103,6 @@ button {
   display: flex;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2vw;
-  font-weight: 300;
   gap: 20px;
 }
 
@@ -133,7 +131,8 @@ button {
   border-radius: 25px;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
-  cursor: pointer;
+  cursor: pointer;  font-weight: 700;
+
   transition: background-color 0.3s ease;
 }
 
@@ -169,14 +168,21 @@ button {
   .logo_resp {
     display: block;
   }
-
+  .logo_resp img {
+    height: 10vw;
+    width: auto;
+  }
+  
+  .navbar-toggle {
+    font-size: 30px;
+  }
   .navbar-toggle {
     display: block;
   }
 
   .menu.open {
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top:7%;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.43);
     backdrop-filter: blur(7px);
@@ -192,5 +198,17 @@ button {
   .order-now {
     width: 80%;
     margin-top: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .logo_resp img {
+    height: 15vw;
+    width: auto;
+  }
+  .menu.open {
+    margin-top:15%;
+  }
+  .navbar-toggle {
+    font-size: 20px;
   }
 }

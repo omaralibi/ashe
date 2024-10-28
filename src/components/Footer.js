@@ -10,6 +10,7 @@ const Footer = () => {
   
   return (
     <footer className="footer">
+      <div className='upperf'>
       <div className="social-links">
         <a href="https://www.tiktok.com/@ashe.tn" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faTiktok}  />
@@ -19,7 +20,9 @@ const Footer = () => {
         </a>
       </div>
       <p className='midText'>BE PART OF THE JOURNEY</p>
-      <p className='be'>#be_distinct</p>
+      <p className='be'>#be_distinct</p></div>
+
+      <p className='copyright'>© 2024 Ashe. All rights reserved. - ashe.tn</p>
     </footer>
   );
 }
