@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "//omaralibi.github.io/-/precache-manifest.f8c2ffa91862b5d064ce5e8d712dff90.js"
+  "//omaralibi.github.io/-/precache-manifest.dd07d925df70098a8afaf7ecb80d0016.js"
 );
 
 self.addEventListener('message', (event) => {
